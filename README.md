@@ -1,0 +1,150 @@
+# 🌱 스프링 핵심 원리 - 기본편
+
+인프런의 **[스프링 핵심 원리 - 기본편](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8/)** 강의를 수강하며 작성한 실습 코드입니다.
+
+## 📚 강의 소개
+
+김영한님의 스프링 핵심 원리 - 기본편 강의에서 학습한 내용을 정리한 저장소입니다.  
+스프링의 핵심 개념인 **IoC(제어의 역전)**, **DI(의존성 주입)**, **AOP(관점 지향 프로그래밍)** 등을 실습을 통해 학습합니다.
+
+## 🛠 기술 스택
+
+- **Java**: 17
+- **Spring Boot**: 3.5.4
+- **Build Tool**: Gradle
+- **IDE**: IntelliJ IDEA (권장)
+
+## 📋 주요 학습 내용
+
+### 1. 스프링 핵심 원리 이해
+- 좋은 객체 지향 설계의 5가지 원칙 (SOLID)
+- 객체 지향 설계와 스프링의 관계
+
+### 2. 스프링 핵심 원리 - 예제 만들기
+- 비즈니스 요구사항과 설계
+- 회원 도메인 개발 및 테스트
+- 주문과 할인 도메인 개발 및 테스트
+
+### 3. 객체 지향 원리 적용
+- 새로운 할인 정책 개발
+- 관심사의 분리
+- AppConfig 리팩터링
+- IoC, DI, 컨테이너
+
+### 4. 스프링 컨테이너와 스프링 빈
+- 스프링 컨테이너 생성
+- 컨테이너에 등록된 모든 빈 조회
+- 스프링 빈 조회 - 기본/동일한 타입/상속 관계
+
+### 5. 싱글톤 컨테이너
+- 웹 애플리케이션과 싱글톤
+- 싱글톤 패턴의 문제점
+- 싱글톤 컨테이너
+- 싱글톤 방식의 주의점
+
+### 6. 컴포넌트 스캔
+- 컴포넌트 스캔과 의존관계 자동 주입
+- 탐색 위치와 기본 스캔 대상
+- 중복 등록과 충돌
+
+### 7. 의존관계 자동 주입
+- 다양한 의존관계 주입 방법
+- 옵션 처리
+- 생성자 주입을 선택하는 이유
+- Lombok과 최신 트렌드
+- 조회 빈이 2개 이상일 때의 문제 해결
+
+### 8. 빈 생명주기 콜백
+- 빈 생명주기 콜백 시작
+- 인터페이스 InitializingBean, DisposableBean
+- 빈 등록 초기화, 소멸 메서드
+- 애노테이션 @PostConstruct, @PreDestroy
+
+### 9. 빈 스코프
+- 빈 스코프란?
+- 프로토타입 스코프
+- 프로토타입 스코프 - 싱글톤 빈과 함께 사용시 문제점
+- 프로토타입 스코프 - 싱글톤 빈과 함께 사용시 Provider로 문제 해결
+- 웹 스코프
+- request 스코프 예제 만들기
+- 스코프와 Provider
+- 스코프와 프록시
+
+## 🚀 실행 방법
+
+### 1. 저장소 클론
+```bash
+git clone https://github.com/hh-0704/core.git
+cd core
+```
+
+### 2. 프로젝트 실행
+```bash
+# Gradle Wrapper를 사용한 빌드
+./gradlew build
+
+# 애플리케이션 실행
+./gradlew bootRun
+```
+
+### 3. 테스트 실행
+```bash
+# 모든 테스트 실행
+./gradlew test
+
+# 특정 테스트 클래스 실행
+./gradlew test --tests "hello.core.*"
+```
+
+## 📂 프로젝트 구조
+
+```
+src/
+├── main/
+│   ├── java/
+│   │   └── hello/
+│   │       └── core/
+│   │           ├── CoreApplication.java
+│   │           ├── AppConfig.java
+│   │           ├── member/
+│   │           ├── order/
+│   │           └── discount/
+│   └── resources/
+│       └── application.properties
+└── test/
+    └── java/
+        └── hello/
+            └── core/
+                ├── member/
+                ├── order/
+                ├── discount/
+                └── beanfind/
+```
+
+## 📝 학습 노트
+
+각 섹션별로 중요한 개념과 실습 내용을 정리하여 추후 복습에 활용할 예정입니다.
+
+### 핵심 개념
+- **IoC (Inversion of Control)**: 제어의 역전
+- **DI (Dependency Injection)**: 의존성 주입
+- **AOP (Aspect Oriented Programming)**: 관점 지향 프로그래밍
+
+### 스프링의 핵심 가치
+1. **좋은 객체 지향 애플리케이션을 개발할 수 있게 도와주는 프레임워크**
+2. **SOLID 원칙을 지키면서 개발할 수 있도록 지원**
+3. **DI 컨테이너를 통한 의존관계 주입**
+
+## 🔗 관련 링크
+
+- [강의 링크](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8/)
+- [스프링 공식 문서](https://spring.io/projects/spring-framework)
+- [스프링 부트 공식 문서](https://spring.io/projects/spring-boot)
+
+## 📧 Contact
+
+궁금한 점이나 개선사항이 있다면 이슈를 통해 알려주세요!
+
+---
+
+**📚 지속적인 학습과 성장을 위한 여정입니다. 🌱**
