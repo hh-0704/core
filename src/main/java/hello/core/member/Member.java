@@ -6,10 +6,10 @@ public class Member {
     private String name;
     private Grade grade;
 
-    public Member(Grade grade, Long id, String name) {
-        this.grade = grade;
+    public Member(Long id, String name, Grade grade) {
         this.id = id;
         this.name = name;
+        this.grade = grade;
     }
 
     public Long getId() {
