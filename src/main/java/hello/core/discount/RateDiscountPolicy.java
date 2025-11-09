@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import javax.print.DocFlavor;
 
 @Component
-@MainDiscountPolicy
+//@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;
